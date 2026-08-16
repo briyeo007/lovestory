@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>우리의 버킷리스트 💕</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="heart-field" aria-hidden="true"></div>
+
+<header class="hero">
+  <p class="hero-eyebrow">OUR STORY, TOGETHER</p>
+  <h1 class="hero-title">우리의 버킷리스트</h1>
+  <p class="hero-subtitle">함께 이뤄갈 우리의 이야기, 하나씩 채워가요 🤍</p>
+
+  <div class="progress-wrap" aria-live="polite">
+    <div class="progress-track">
+      <div class="progress-fill" id="overall-fill"></div>
+    </div>
+    <p class="progress-label"><span id="overall-count">0</span> / <span id="overall-total">46</span> 완료 · <span id="overall-percent">0</span>%</p>
+  </div>
+</header>
+
+<nav class="quick-nav" id="quick-nav">
+  <a href="#love" data-target="love"><span>💕</span>연애</a>
+  <a href="#places" data-target="places"><span>🎨</span>장소</a>
+  <a href="#travel" data-target="travel"><span>✈️</span>여행</a>
+  <a href="#daily" data-target="daily"><span>🏡</span>일상</a>
+  <a href="#future" data-target="future"><span>💍</span>미래</a>
+</nav>
+
+<main>
+
+  <section class="category" id="love" data-section>
+    <div class="category-header">
+      <h2><span class="cat-emoji">💕</span> 같이 해보고 싶은 연애</h2>
+      <p class="cat-progress"><span class="done">0</span>/<span class="total">13</span> 완료</p>
+    </div>
+    <ul class="bucket-list">
+      <li class="bucket-item"><input type="checkbox" id="item-0"><label for="item-0"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">연인 사진 예쁘게 찍기</span></label></li>
+      <li class="bucket-item"><input type="checkbox" id="item-1"><label for="item-1"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">커플 케이스 맞추기</span></label></li>
+      <li class="bucket-item"><input type="checkbox" id="item-2"><label for="item-2"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">주말에 둘이 드라이브 가기</span></label></li>
+      <li class="bucket-item"><input type="checkbox" id="item-3"><label for="item-3"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">맛집 찾아다니기</span></label></li>
+      <li class="bucket-item"><input type="checkbox" id="item-4"><label for="item-4"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">예쁜 카페 같이 다니기</span></label></li>
+      <li class="bucket-item"><input type="checkbox" id="item-5"><label for="item-5"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">영화관 데이트 계속하기</span></label></li>
+      <li class="bucket-item"><input type="checkbox" id="item-6"><label for="item-6"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">집에서 같이 영화 보기</span></label></li>
+      <li class="bucket-item"><input type="checkbox" id="item-7"><label for="item-7"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">보드게임 같이 하기</span></label></li>
+      <li class="bucket-item"><input type="checkbox" id="item-8"><label for="item-8"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">운동 같이 하기</span></label></li>
+      <li class="bucket-item"><input type="checkbox" id="item-9"><label for="item-9"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">서로 사진 찍어주면서 추억 남기기</span></label></li>
+      <li class="bucket-item"><input type="checkbox" id="item-10"><label for="item-10"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">기념일·생일에는 특별한 데이트하기</span></label></li>
+      <li class="bucket-item"><input type="checkbox" id="item-11"><label for="item-11"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">서로 친구 모임에도 자연스럽게 함께 가기</span></label></li>
+      <li class="bucket-item"><input type="checkbox" id="item-12"><label for="item-12"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">결혼 후에도 서로 꾸미고 데이트하기</span></label></li>
+    </ul>
+  </section>
+
+  <section class="category" id="places" data-section>
+    <div class="category-header">
+      <h2><span class="cat-emoji">🎨</span> 같이 가보고 싶은 곳</h2>
+      <p class="cat-progress"><span class="done">0</span>/<span class="total">15</span> 완료</p>
+    </div>
+    <ul class="bucket-list">
+      <li class="bucket-item"><input type="checkbox" id="item-13"><label for="item-13"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">국립현대미술관</span></label></li>
+      <li class="bucket-item"><input type="checkbox" id="item-14"><label for="item-14"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">경복궁</span></label></li>
+      <li class="bucket-item"><input type="checkbox" id="item-15"><label for="item-15"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">창경궁</span></label></li>
+      <li class="bucket-item"><input type="checkbox" id="item-16"><label for="item-16"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">창경궁 대온실</span></label></li>
+      <li class="bucket-item"><input type="checkbox" id="item-17"><label for="item-17"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">어쩌다 산책</span></label></li>
+      <li class="bucket-item"><input type="checkbox" id="item-18"><label for="item-18"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">마로니에공원</span></label></li>
+      <li class="bucket-item"><input type="checkbox" id="item-19"><label for="item-19"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">아르코미술관</span></label></li>
+      <li class="bucket-item"><input type="checkbox" id="item-20"><label for="item-20"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">예술가의집</span></label></li>
+      <li class="bucket-item"><input type="checkbox" id="item-21"><label for="item-21"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">낙산공원</span></label></li>
+      <li class="bucket-item"><input type="checkbox" id="item-22"><label for="item-22"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">남산타워 가서 같이 자물쇠 채우기</span></label></li>
+      <li class="bucket-item"><input type="checkbox" id="item-23"><label for="item-23"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">롯데월드</span></label></li>
+      <li class="bucket-item"><input type="checkbox" id="item-24"><label for="item-24"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">아쿠아리움</span></label></li>
+      <li class="bucket-item"><input type="checkbox" id="item-25"><label for="item-25"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">서울대공원·과천 나들이</span></label></li>
+      <li class="bucket-item"><input type="checkbox" id="item-26"><label for="item-26"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">야구장 데이트</span></label></li>
+      <li class="bucket-item"><input type="checkbox" id="item-27"><label for="item-27"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">미술관·전시 자주 보러 다니기</span></label></li>
+    </ul>
+  </section>
+
+  <section class="category" id="travel" data-section>
+    <div class="category-header">
+      <h2><span class="cat-emoji">✈️</span> 같이 여행하기</h2>
+      <p class="cat-progress"><span class="done">0</span>/<span class="total">6</span> 완료</p>
+    </div>
+    <ul class="bucket-list">
+      <li class="bucket-item"><input type="checkbox" id="item-28"><label for="item-28"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">해외여행 자주 다니기</span></label></li>
+      <li class="bucket-item"><input type="checkbox" id="item-29"><label for="item-29"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">한국과 캐나다를 같이 오가며 지내기</span></label></li>
+      <li class="bucket-item"><input type="checkbox" id="item-30"><label for="item-30"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">국내 여기저기 여행 다니기</span></label></li>
+      <li class="bucket-item"><input type="checkbox" id="item-31"><label for="item-31"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">가끔 즉흥적으로 여행이나 호캉스 가기</span></label></li>
+      <li class="bucket-item"><input type="checkbox" id="item-32"><label for="item-32"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">아이가 생기면 가족여행 많이 다니기</span></label></li>
+      <li class="bucket-item"><input type="checkbox" id="item-33"><label for="item-33"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">나이가 들어서도 손잡고 여행 다니기</span></label></li>
+    </ul>
+  </section>
+
+  <section class="category" id="daily" data-section>
+    <div class="category-header">
+      <h2><span class="cat-emoji">🏡</span> 같이 만들어보고 싶은 일상</h2>
+      <p class="cat-progress"><span class="done">0</span>/<span class="total">8</span> 완료</p>
+    </div>
+    <ul class="bucket-list">
+      <li class="bucket-item"><input type="checkbox" id="item-34"><label for="item-34"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">강아지 키우기</span></label></li>
+      <li class="bucket-item"><input type="checkbox" id="item-35"><label for="item-35"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">저녁에 같이 강아지 산책시키기</span></label></li>
+      <li class="bucket-item"><input type="checkbox" id="item-36"><label for="item-36"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">주말에 같이 장 보고 요리하기</span></label></li>
+      <li class="bucket-item"><input type="checkbox" id="item-37"><label for="item-37"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">둘만의 예쁜 집 꾸미기</span></label></li>
+      <li class="bucket-item"><input type="checkbox" id="item-38"><label for="item-38"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">집에 영화·게임 등을 즐길 수 있는 취미 공간 만들기</span></label></li>
+      <li class="bucket-item"><input type="checkbox" id="item-39"><label for="item-39"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">퇴근 후 같이 저녁 먹으면서 하루 이야기하기</span></label></li>
+      <li class="bucket-item"><input type="checkbox" id="item-40"><label for="item-40"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">자기 전에 같이 누워서 이런저런 이야기하기</span></label></li>
+      <li class="bucket-item"><input type="checkbox" id="item-41"><label for="item-41"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">크리스마스나 명절 같은 날 둘만의 전통 만들기</span></label></li>
+    </ul>
+  </section>
+
+  <section class="category" id="future" data-section>
+    <div class="category-header">
+      <h2><span class="cat-emoji">💍</span> 같이 만들어가고 싶은 미래</h2>
+      <p class="cat-progress"><span class="done">0</span>/<span class="total">4</span> 완료</p>
+    </div>
+    <ul class="bucket-list">
+      <li class="bucket-item"><input type="checkbox" id="item-42"><label for="item-42"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">서로 하고 싶은 일을 응원해주기</span></label></li>
+      <li class="bucket-item"><input type="checkbox" id="item-43"><label for="item-43"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">경제적으로 여유 있는 가정 만들어가기</span></label></li>
+      <li class="bucket-item"><input type="checkbox" id="item-44"><label for="item-44"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">둘이 장기적인 목표를 세우고 하나씩 이루기</span></label></li>
+      <li class="bucket-item"><input type="checkbox" id="item-45"><label for="item-45"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">아내가 내 가장 친한 친구이자 연인이 되는 결혼생활</span></label></li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p class="footer-heart">🤍</p>
+  <p class="footer-text">하나씩, 우리 속도대로 함께 채워가자</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
