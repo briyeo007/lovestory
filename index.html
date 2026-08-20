@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>우리의 버킷리스트 💕</title>
+<title>Someday With You 💕</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&display=swap" rel="stylesheet">
@@ -14,15 +14,23 @@
 <div id="heart-field" aria-hidden="true"></div>
 
 <header class="hero">
-  <p class="hero-eyebrow">OUR STORY, TOGETHER</p>
+  <div class="hero-decor" aria-hidden="true">
+    <span class="polaroid polaroid-1"><span class="polaroid-photo polaroid-photo--a">✈️</span></span>
+    <span class="polaroid polaroid-2"><span class="polaroid-photo polaroid-photo--b">🤍</span></span>
+    <span class="polaroid polaroid-3"><span class="polaroid-photo polaroid-photo--c">📍</span></span>
+  </div>
+
+  <p class="hero-eyebrow">Someday With You</p>
   <h1 class="hero-title">우리의 버킷리스트</h1>
   <p class="hero-subtitle">함께 이뤄갈 우리의 이야기, 하나씩 채워가요 🤍</p>
 
   <div class="progress-wrap" aria-live="polite">
+    <p class="progress-caption">우리의 추억</p>
+    <p class="progress-count">♡ <span id="overall-count">0</span>개 완료</p>
     <div class="progress-track">
       <div class="progress-fill" id="overall-fill"></div>
     </div>
-    <p class="progress-label"><span id="overall-count">0</span> / <span id="overall-total">54</span> 완료 · <span id="overall-percent">0</span>%</p>
+    <p class="progress-meta"><span id="overall-percent">0</span>% · 총 <span id="overall-total">53</span>개</p>
   </div>
 </header>
 
@@ -30,8 +38,8 @@
   <a href="#love" data-target="love"><span>💕</span>연애</a>
   <a href="#places" data-target="places"><span>🎨</span>장소</a>
   <a href="#travel" data-target="travel"><span>✈️</span>여행</a>
-  <a href="#daily" data-target="daily"><span>🏡</span>일상</a>
-  <a href="#future" data-target="future"><span>💍</span>미래</a>
+  <a href="#daily" data-target="daily"><span>🏠</span>일상</a>
+  <a href="#future" data-target="future"><span>🌱</span>미래</a>
 </nav>
 
 <main>
@@ -54,7 +62,7 @@
       <li class="bucket-item"><input type="checkbox" id="item-9"><label for="item-9"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">서로 사진 찍어주면서 추억 남기기</span></label></li>
       <li class="bucket-item"><input type="checkbox" id="item-10"><label for="item-10"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">기념일·생일에는 특별한 데이트하기</span></label></li>
       <li class="bucket-item"><input type="checkbox" id="item-11"><label for="item-11"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">서로 친구 모임에도 자연스럽게 함께 가기</span></label></li>
-      <li class="bucket-item"><input type="checkbox" id="item-12"><label for="item-12"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">결혼 후에도 서로 꾸미고 데이트하기</span></label></li>
+      <li class="bucket-item"><input type="checkbox" id="item-12"><label for="item-12"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">오래 만나도 서로 꾸미고 데이트하기</span></label></li>
     </ul>
   </section>
 
@@ -85,36 +93,126 @@
   <section class="category" id="travel" data-section>
     <div class="category-header">
       <h2><span class="cat-emoji">✈️</span> 같이 여행하기</h2>
-      <p class="cat-progress"><span class="done">0</span>/<span class="total">14</span> 완료</p>
+      <p class="cat-progress"><span class="done">0</span>/<span class="total">13</span> 완료</p>
     </div>
+
+    <p class="section-subhead">여행 다짐</p>
     <ul class="bucket-list">
       <li class="bucket-item"><input type="checkbox" id="item-28"><label for="item-28"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">해외여행 자주 다니기</span></label></li>
-      <li class="bucket-item"><input type="checkbox" id="item-29"><label for="item-29"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">한국과 캐나다를 같이 오가며 지내기</span></label></li>
+      <li class="bucket-item"><input type="checkbox" id="item-29"><label for="item-29"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">같이 밴쿠버 여행 가서 내가 좋아했던 곳 보여주기</span></label></li>
       <li class="bucket-item"><input type="checkbox" id="item-30"><label for="item-30"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">국내 여기저기 여행 다니기</span></label></li>
       <li class="bucket-item"><input type="checkbox" id="item-31"><label for="item-31"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">가끔 즉흥적으로 여행이나 호캉스 가기</span></label></li>
-      <li class="bucket-item"><input type="checkbox" id="item-32"><label for="item-32"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">아이가 생기면 가족여행 많이 다니기</span></label></li>
-      <li class="bucket-item"><input type="checkbox" id="item-33"><label for="item-33"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">나이가 들어서도 손잡고 여행 다니기</span></label></li>
-      <li class="bucket-item"><input type="checkbox" id="item-46"><label for="item-46"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">🇨🇦 밴쿠버 — 내가 살았던 곳 같이 보여주기</span></label></li>
-      <li class="bucket-item"><input type="checkbox" id="item-47"><label for="item-47"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">🇯🇵 일본 — 도쿄·오사카 같이 여행하기</span></label></li>
-      <li class="bucket-item"><input type="checkbox" id="item-48"><label for="item-48"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">🇰🇷 제주도 — 렌터카 빌려서 둘이 드라이브 여행하기</span></label></li>
-      <li class="bucket-item"><input type="checkbox" id="item-49"><label for="item-49"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">🇺🇸 뉴욕 — 크리스마스 시즌에 같이 가보기</span></label></li>
-      <li class="bucket-item"><input type="checkbox" id="item-50"><label for="item-50"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">🇵🇭 엘니도 — 섬 투어하고 에메랄드빛 바다 보기</span></label></li>
-      <li class="bucket-item"><input type="checkbox" id="item-51"><label for="item-51"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">🇬🇺 괌 — 리조트에서 쉬면서 바다 즐기기</span></label></li>
-      <li class="bucket-item"><input type="checkbox" id="item-52"><label for="item-52"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">🇬🇧 영국 — 런던 같이 여행하기</span></label></li>
-      <li class="bucket-item"><input type="checkbox" id="item-53"><label for="item-53"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">🇨🇭 스위스 — 풍경 보면서 기차 여행하기</span></label></li>
+      <li class="bucket-item"><input type="checkbox" id="item-33"><label for="item-33"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">매년 같이 새로운 곳 하나씩 여행하기</span></label></li>
     </ul>
+
+    <p class="section-subhead section-subhead--spaced">가보고 싶은 여행지</p>
+    <ul class="bucket-list destination-grid">
+      <li class="bucket-item destination-card">
+        <input type="checkbox" id="item-47">
+        <label for="item-47">
+          <span class="dest-thumb dest-thumb--japan"><span class="dest-flag">🇯🇵</span></span>
+          <span class="dest-body">
+            <span class="dest-name">Japan</span>
+            <span class="dest-desc">도쿄·오사카 같이 여행하기</span>
+            <span class="dest-status"><span class="dest-status-todo">♡ 언젠가 같이 가기</span><span class="dest-status-done">✓ 다녀왔어요</span></span>
+          </span>
+        </label>
+      </li>
+      <li class="bucket-item destination-card">
+        <input type="checkbox" id="item-46">
+        <label for="item-46">
+          <span class="dest-thumb dest-thumb--vancouver"><span class="dest-flag">🇨🇦</span></span>
+          <span class="dest-body">
+            <span class="dest-name">Vancouver</span>
+            <span class="dest-desc">내가 좋아했던 곳 같이 돌아보기</span>
+            <span class="dest-status"><span class="dest-status-todo">♡ 언젠가 같이 가기</span><span class="dest-status-done">✓ 다녀왔어요</span></span>
+          </span>
+        </label>
+      </li>
+      <li class="bucket-item destination-card">
+        <input type="checkbox" id="item-52">
+        <label for="item-52">
+          <span class="dest-thumb dest-thumb--london"><span class="dest-flag">🇬🇧</span></span>
+          <span class="dest-body">
+            <span class="dest-name">London</span>
+            <span class="dest-desc">런던 같이 여행하기</span>
+            <span class="dest-status"><span class="dest-status-todo">♡ 언젠가 같이 가기</span><span class="dest-status-done">✓ 다녀왔어요</span></span>
+          </span>
+        </label>
+      </li>
+      <li class="bucket-item destination-card">
+        <input type="checkbox" id="item-51">
+        <label for="item-51">
+          <span class="dest-thumb dest-thumb--guam"><span class="dest-flag">🇬🇺</span></span>
+          <span class="dest-body">
+            <span class="dest-name">Guam</span>
+            <span class="dest-desc">리조트에서 여유롭게 휴양하기</span>
+            <span class="dest-status"><span class="dest-status-todo">♡ 언젠가 같이 가기</span><span class="dest-status-done">✓ 다녀왔어요</span></span>
+          </span>
+        </label>
+      </li>
+      <li class="bucket-item destination-card">
+        <input type="checkbox" id="item-50">
+        <label for="item-50">
+          <span class="dest-thumb dest-thumb--elnido"><span class="dest-flag">🇵🇭</span></span>
+          <span class="dest-body">
+            <span class="dest-name">El Nido</span>
+            <span class="dest-desc">섬 투어하고 에메랄드빛 바다 즐기기</span>
+            <span class="dest-status"><span class="dest-status-todo">♡ 언젠가 같이 가기</span><span class="dest-status-done">✓ 다녀왔어요</span></span>
+          </span>
+        </label>
+      </li>
+      <li class="bucket-item destination-card">
+        <input type="checkbox" id="item-53">
+        <label for="item-53">
+          <span class="dest-thumb dest-thumb--switzerland"><span class="dest-flag">🇨🇭</span></span>
+          <span class="dest-body">
+            <span class="dest-name">Switzerland</span>
+            <span class="dest-desc">알프스 산맥 올라가서 마을 구경하기</span>
+            <span class="dest-status"><span class="dest-status-todo">♡ 언젠가 같이 가기</span><span class="dest-status-done">✓ 다녀왔어요</span></span>
+          </span>
+        </label>
+      </li>
+      <li class="bucket-item destination-card">
+        <input type="checkbox" id="item-49">
+        <label for="item-49">
+          <span class="dest-thumb dest-thumb--newyork"><span class="dest-flag">🇺🇸</span></span>
+          <span class="dest-body">
+            <span class="dest-name">New York</span>
+            <span class="dest-desc">크리스마스 시즌에 같이 가보기</span>
+            <span class="dest-status"><span class="dest-status-todo">♡ 언젠가 같이 가기</span><span class="dest-status-done">✓ 다녀왔어요</span></span>
+          </span>
+        </label>
+      </li>
+      <li class="bucket-item destination-card">
+        <input type="checkbox" id="item-48">
+        <label for="item-48">
+          <span class="dest-thumb dest-thumb--jeju"><span class="dest-flag">🇰🇷</span></span>
+          <span class="dest-body">
+            <span class="dest-name">Jeju</span>
+            <span class="dest-desc">렌터카 타고 드라이브 여행하기</span>
+            <span class="dest-status"><span class="dest-status-todo">♡ 언젠가 같이 가기</span><span class="dest-status-done">✓ 다녀왔어요</span></span>
+          </span>
+        </label>
+      </li>
+    </ul>
+
+    <div class="add-destination-card">
+      <span class="add-destination-icon">＋</span>
+      <span class="add-destination-text">둘이 가고 싶은 여행지 하나씩 추가해보기</span>
+    </div>
   </section>
 
   <section class="category" id="daily" data-section>
     <div class="category-header">
-      <h2><span class="cat-emoji">🏡</span> 같이 만들어보고 싶은 일상</h2>
+      <h2><span class="cat-emoji">🏠</span> 같이 만들어보고 싶은 일상</h2>
       <p class="cat-progress"><span class="done">0</span>/<span class="total">8</span> 완료</p>
     </div>
     <ul class="bucket-list">
       <li class="bucket-item"><input type="checkbox" id="item-34"><label for="item-34"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">강아지 키우기</span></label></li>
       <li class="bucket-item"><input type="checkbox" id="item-35"><label for="item-35"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">저녁에 같이 강아지 산책시키기</span></label></li>
       <li class="bucket-item"><input type="checkbox" id="item-36"><label for="item-36"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">주말에 같이 장 보고 요리하기</span></label></li>
-      <li class="bucket-item"><input type="checkbox" id="item-37"><label for="item-37"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">둘만의 예쁜 집 꾸미기</span></label></li>
+      <li class="bucket-item"><input type="checkbox" id="item-37"><label for="item-37"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">서로 취향 담아서 공간 꾸며보기</span></label></li>
       <li class="bucket-item"><input type="checkbox" id="item-38"><label for="item-38"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">집에 영화·게임 등을 즐길 수 있는 취미 공간 만들기</span></label></li>
       <li class="bucket-item"><input type="checkbox" id="item-39"><label for="item-39"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">퇴근 후 같이 저녁 먹으면서 하루 이야기하기</span></label></li>
       <li class="bucket-item"><input type="checkbox" id="item-40"><label for="item-40"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">자기 전에 같이 누워서 이런저런 이야기하기</span></label></li>
@@ -124,14 +222,14 @@
 
   <section class="category" id="future" data-section>
     <div class="category-header">
-      <h2><span class="cat-emoji">💍</span> 같이 만들어가고 싶은 미래</h2>
+      <h2><span class="cat-emoji">🌱</span> 같이 만들어가고 싶은 미래</h2>
       <p class="cat-progress"><span class="done">0</span>/<span class="total">4</span> 완료</p>
     </div>
     <ul class="bucket-list">
       <li class="bucket-item"><input type="checkbox" id="item-42"><label for="item-42"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">서로 하고 싶은 일을 응원해주기</span></label></li>
-      <li class="bucket-item"><input type="checkbox" id="item-43"><label for="item-43"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">경제적으로 여유 있는 가정 만들어가기</span></label></li>
+      <li class="bucket-item"><input type="checkbox" id="item-43"><label for="item-43"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">서로 하고 싶은 것 마음껏 응원해줄 수 있는 사이 되기</span></label></li>
       <li class="bucket-item"><input type="checkbox" id="item-44"><label for="item-44"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">둘이 장기적인 목표를 세우고 하나씩 이루기</span></label></li>
-      <li class="bucket-item"><input type="checkbox" id="item-45"><label for="item-45"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">아내가 내 가장 친한 친구이자 연인이 되는 결혼생활</span></label></li>
+      <li class="bucket-item"><input type="checkbox" id="item-45"><label for="item-45"><svg class="heart-icon" viewBox="0 0 32 29"><path d="M16 28.5C16 28.5 1 19.6 1 9.7C1 4.9 4.8 1 9.6 1C12.4 1 14.9 2.3 16 4.4C17.1 2.3 19.6 1 22.4 1C27.2 1 31 4.9 31 9.7C31 19.6 16 28.5 16 28.5Z"/></svg><span class="txt">연인이면서 제일 편한 친구 같은 사이 되기</span></label></li>
     </ul>
   </section>
 
@@ -140,6 +238,7 @@
 <footer class="site-footer">
   <p class="footer-heart">🤍</p>
   <p class="footer-text">하나씩, 우리 속도대로 함께 채워가자</p>
+  <p class="footer-credit">여행지 사진 출처: Wikimedia Commons (CC BY-SA)</p>
 </footer>
 
 <script src="script.js"></script>

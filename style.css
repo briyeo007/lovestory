@@ -1,12 +1,14 @@
 :root {
-  --pink-deep: #ff8fab;
-  --pink: #ffb3c6;
-  --pink-soft: #ffd6e0;
-  --lavender: #e7d9f5;
-  --cream: #fff5f7;
-  --ink: #6b4453;
-  --ink-soft: #9c7a87;
-  --gold: #f2c9a0;
+  --ivory: #faf6f0;
+  --cream: #fffbf6;
+  --rose: #c98a92;
+  --rose-deep: #b06d76;
+  --rose-pale: #f1dde0;
+  --rose-pale-soft: #f7e9ea;
+  --beige: #e9dcc9;
+  --beige-deep: #d3bd9c;
+  --ink: #4f3d38;
+  --ink-soft: #8d7669;
   --white: #ffffff;
 }
 
@@ -18,7 +20,7 @@ body {
   margin: 0;
   font-family: 'Gowun Dodum', sans-serif;
   color: var(--ink);
-  background: linear-gradient(160deg, #fff8f9 0%, #fdf1f5 35%, #f6ecfa 70%, #fef4f2 100%);
+  background: linear-gradient(160deg, #fdf9f4 0%, #faf3ea 40%, #f6ecdf 75%, #f8efe6 100%);
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
@@ -36,15 +38,15 @@ body {
 .floating-heart {
   position: absolute;
   bottom: -40px;
-  color: var(--pink);
-  opacity: 0.55;
+  color: var(--rose-pale);
+  opacity: 0.5;
   animation: floatUp linear forwards;
   will-change: transform, opacity;
 }
 
 @keyframes floatUp {
   0% { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0; }
-  10% { opacity: 0.55; }
+  10% { opacity: 0.5; }
   100% { transform: translateY(-110vh) translateX(var(--drift, 30px)) rotate(25deg); opacity: 0; }
 }
 
@@ -53,62 +55,109 @@ body {
   position: relative;
   z-index: 1;
   text-align: center;
-  padding: 84px 24px 40px;
+  padding: 96px 24px 40px;
+  overflow: visible;
 }
 
+.hero-decor {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.polaroid {
+  position: absolute;
+  background: var(--white);
+  padding: 7px 7px 16px;
+  border-radius: 6px;
+  box-shadow: 0 12px 26px rgba(120, 90, 70, 0.16);
+}
+
+.polaroid-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 3px;
+  font-size: 24px;
+}
+
+.polaroid-photo--a { background: linear-gradient(135deg, var(--rose-pale), var(--beige)); }
+.polaroid-photo--b { background: linear-gradient(135deg, var(--beige), var(--rose-pale-soft)); }
+.polaroid-photo--c { background: linear-gradient(135deg, var(--rose-pale-soft), var(--beige-deep)); }
+
+.polaroid-1 { top: 18px; left: 6%; transform: rotate(-9deg); }
+.polaroid-2 { top: 6px; right: 7%; transform: rotate(7deg); }
+.polaroid-3 { top: 128px; right: 15%; transform: rotate(-6deg); }
+
 .hero-eyebrow {
-  letter-spacing: 0.35em;
-  font-size: 12px;
-  color: var(--pink-deep);
+  font-family: 'Gowun Batang', serif;
+  font-style: italic;
+  letter-spacing: 0.12em;
+  font-size: 14px;
+  color: var(--rose-deep);
   font-weight: 700;
-  margin: 0 0 18px;
-  text-transform: uppercase;
+  margin: 0 0 16px;
 }
 
 .hero-title {
   font-family: 'Gowun Batang', serif;
   font-weight: 700;
-  font-size: clamp(36px, 7vw, 64px);
+  font-size: clamp(34px, 6.5vw, 58px);
   margin: 0 0 14px;
   color: var(--ink);
   letter-spacing: -0.01em;
 }
 
 .hero-subtitle {
-  font-size: clamp(14px, 2.4vw, 18px);
+  font-size: clamp(14px, 2.4vw, 17px);
   color: var(--ink-soft);
   margin: 0 0 40px;
 }
 
 .progress-wrap {
-  max-width: 420px;
+  max-width: 260px;
   margin: 0 auto;
 }
 
+.progress-caption {
+  margin: 0;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+  font-weight: 600;
+}
+
+.progress-count {
+  margin: 4px 0 12px;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--rose-deep);
+  font-family: 'Gowun Batang', serif;
+}
+
 .progress-track {
-  height: 12px;
+  height: 5px;
   border-radius: 999px;
-  background: rgba(255, 179, 198, 0.25);
+  background: rgba(201, 138, 146, 0.18);
   overflow: hidden;
-  box-shadow: inset 0 1px 3px rgba(180, 100, 130, 0.15);
 }
 
 .progress-fill {
   height: 100%;
   width: 0%;
   border-radius: 999px;
-  background: linear-gradient(90deg, var(--pink-soft), var(--pink-deep));
+  background: linear-gradient(90deg, var(--rose-pale), var(--rose-deep));
   transition: width 0.6s cubic-bezier(.22,1,.36,1);
 }
 
-.progress-label {
-  margin: 12px 0 0;
-  font-size: 14px;
+.progress-meta {
+  margin: 8px 0 0;
+  font-size: 11.5px;
   color: var(--ink-soft);
-  font-weight: 600;
+  opacity: 0.75;
 }
-
-.progress-label span { color: var(--pink-deep); }
 
 /* ---------- nav ---------- */
 .quick-nav {
@@ -121,10 +170,10 @@ body {
   flex-wrap: wrap;
   padding: 12px 16px;
   margin-bottom: 20px;
-  background: rgba(255, 248, 249, 0.75);
+  background: rgba(253, 249, 244, 0.78);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 179, 198, 0.3);
+  border-bottom: 1px solid rgba(201, 138, 146, 0.2);
 }
 
 .quick-nav a {
@@ -144,14 +193,14 @@ body {
 .quick-nav a span { font-size: 15px; }
 
 .quick-nav a:hover {
-  background: rgba(255, 179, 198, 0.18);
-  color: var(--pink-deep);
+  background: rgba(201, 138, 146, 0.12);
+  color: var(--rose-deep);
 }
 
 .quick-nav a.active {
-  background: linear-gradient(90deg, var(--pink), var(--pink-deep));
+  background: linear-gradient(90deg, var(--rose), var(--rose-deep));
   color: white;
-  box-shadow: 0 4px 14px rgba(255, 143, 171, 0.4);
+  box-shadow: 0 4px 14px rgba(176, 109, 118, 0.35);
 }
 
 /* ---------- main / categories ---------- */
@@ -164,7 +213,7 @@ main {
 }
 
 .category {
-  margin-bottom: 56px;
+  margin-bottom: 60px;
   scroll-margin-top: 90px;
 }
 
@@ -172,9 +221,9 @@ main {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  border-bottom: 2px dashed rgba(255, 143, 171, 0.35);
+  border-bottom: 2px dashed rgba(201, 138, 146, 0.3);
   padding-bottom: 12px;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
 .category-header h2 {
@@ -196,6 +245,16 @@ main {
   margin: 0;
   white-space: nowrap;
 }
+
+.section-subhead {
+  font-family: 'Gowun Batang', serif;
+  font-size: 14px;
+  color: var(--ink-soft);
+  margin: 0 0 12px;
+  letter-spacing: 0.02em;
+}
+
+.section-subhead--spaced { margin-top: 28px; }
 
 .bucket-list {
   list-style: none;
@@ -220,18 +279,18 @@ main {
   display: flex;
   align-items: center;
   gap: 14px;
-  padding: 14px 18px;
+  padding: 15px 18px;
   background: var(--white);
-  border-radius: 16px;
-  box-shadow: 0 2px 10px rgba(180, 120, 150, 0.08);
+  border-radius: 20px;
+  box-shadow: 0 2px 12px rgba(150, 110, 90, 0.07);
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-  border: 1px solid rgba(255, 179, 198, 0.25);
+  border: 1px solid rgba(201, 138, 146, 0.16);
 }
 
 .bucket-item label:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(255, 143, 171, 0.18);
+  box-shadow: 0 8px 22px rgba(176, 109, 118, 0.16);
 }
 
 .heart-icon {
@@ -239,7 +298,7 @@ main {
   height: 20px;
   flex-shrink: 0;
   fill: none;
-  stroke: var(--pink);
+  stroke: var(--rose);
   stroke-width: 2;
   transition: all 0.3s cubic-bezier(.22,1.5,.36,1);
 }
@@ -252,24 +311,24 @@ main {
 }
 
 .bucket-item input[type="checkbox"]:checked ~ label {
-  background: linear-gradient(135deg, #fff0f4, #fdf6ff);
+  background: linear-gradient(135deg, var(--rose-pale-soft), var(--cream));
 }
 
 .bucket-item input[type="checkbox"]:checked ~ label .heart-icon {
-  fill: var(--pink-deep);
-  stroke: var(--pink-deep);
+  fill: var(--rose-deep);
+  stroke: var(--rose-deep);
   transform: scale(1.15);
 }
 
 .bucket-item input[type="checkbox"]:checked ~ label .txt {
   color: var(--ink-soft);
   text-decoration: line-through;
-  text-decoration-color: var(--pink);
+  text-decoration-color: var(--rose);
   text-decoration-thickness: 2px;
 }
 
 .bucket-item input[type="checkbox"]:focus-visible ~ label {
-  outline: 2px solid var(--pink-deep);
+  outline: 2px solid var(--rose-deep);
   outline-offset: 2px;
 }
 
@@ -297,6 +356,112 @@ main {
   100% { transform: translate(var(--bx, 20px), calc(-50% + var(--by, -50px))) scale(1.1) rotate(20deg); opacity: 0; }
 }
 
+/* ---------- destination cards (travel) ---------- */
+.destination-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.destination-card label {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 22px;
+}
+
+.dest-thumb {
+  position: relative;
+  height: 120px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-size: cover;
+  background-position: center;
+}
+
+.dest-thumb::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(30, 20, 15, 0.32), rgba(30, 20, 15, 0) 45%);
+}
+
+.dest-thumb--japan { background-color: #eca199; background-image: url('assets/travel/japan.jpg'); }
+.dest-thumb--vancouver { background-color: #8fb7c4; background-image: url('assets/travel/vancouver.jpg'); }
+.dest-thumb--london { background-color: #a49ac0; background-image: url('assets/travel/london.jpg'); }
+.dest-thumb--guam { background-color: #74b7cd; background-image: url('assets/travel/guam.jpg'); }
+.dest-thumb--elnido { background-color: #4fb3c4; background-image: url('assets/travel/elnido.jpg'); }
+.dest-thumb--switzerland { background-color: #a4c9b7; background-image: url('assets/travel/switzerland.jpg'); }
+.dest-thumb--newyork { background-color: #cf9a86; background-image: url('assets/travel/newyork.jpg'); }
+.dest-thumb--jeju { background-color: #a9cf98; background-image: url('assets/travel/jeju.jpg'); }
+
+.dest-flag {
+  position: relative;
+  z-index: 1;
+  margin: 10px 0 0 10px;
+  font-size: 17px;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.35));
+}
+
+.dest-body {
+  padding: 14px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.dest-name {
+  font-family: 'Gowun Batang', serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--ink);
+}
+
+.dest-desc {
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  line-height: 1.4;
+  min-height: 2.6em;
+}
+
+.dest-status {
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--rose-deep);
+}
+
+.dest-status-done { display: none; }
+
+.bucket-item input[type="checkbox"]:checked ~ label .dest-status-todo { display: none; }
+.bucket-item input[type="checkbox"]:checked ~ label .dest-status-done { display: inline; }
+.bucket-item input[type="checkbox"]:checked ~ label .dest-name,
+.bucket-item input[type="checkbox"]:checked ~ label .dest-desc { color: var(--ink-soft); }
+.bucket-item input[type="checkbox"]:checked ~ label .dest-thumb { filter: saturate(0.7) brightness(1.02); }
+
+.add-destination-card {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px;
+  border: 1.5px dashed rgba(201, 138, 146, 0.4);
+  border-radius: 22px;
+  color: var(--ink-soft);
+  font-size: 13.5px;
+  text-align: center;
+}
+
+.add-destination-icon {
+  font-size: 16px;
+  color: var(--rose-deep);
+  font-weight: 700;
+}
+
 /* ---------- footer ---------- */
 .site-footer {
   position: relative;
@@ -317,8 +482,25 @@ main {
   margin: 0;
 }
 
+.footer-credit {
+  margin: 10px 0 0;
+  font-size: 11px;
+  color: var(--ink-soft);
+  opacity: 0.55;
+}
+
 /* ---------- responsive ---------- */
+@media (max-width: 640px) {
+  .polaroid-1 { left: 2%; top: 8px; }
+  .polaroid-2 { right: 3%; top: 0; }
+  .polaroid-3 { display: none; }
+  .destination-grid { grid-template-columns: 1fr; }
+}
+
 @media (max-width: 480px) {
+  .polaroid { transform: scale(0.82); }
+  .polaroid-1 { transform: scale(0.82) rotate(-9deg); }
+  .polaroid-2 { transform: scale(0.82) rotate(7deg); }
   .quick-nav a span { display: inline; }
   .quick-nav a { padding: 7px 12px; font-size: 13px; }
   .category-header { flex-direction: column; align-items: flex-start; gap: 4px; }
